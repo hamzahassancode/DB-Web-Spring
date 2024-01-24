@@ -1,0 +1,80 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Hamza
+  Date: 8/5/2023
+  Time: 10:22 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #35495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #35495e;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        p {
+            color: red;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Login</h1>
+</header>
+<div class="container">
+    <form action="/login" method="post">
+        <label >Username:</label>
+        <input type="text" name="username"  required>
+        <label >Password:</label>
+        <input type="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+    <p>${errorMessage}</p>
+</div>
+</body>
+</html>
