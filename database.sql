@@ -1,0 +1,1 @@
+SELECT * FROM student_grading_system.students;
